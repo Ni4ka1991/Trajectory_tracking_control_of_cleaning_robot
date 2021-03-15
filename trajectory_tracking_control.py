@@ -7,13 +7,13 @@
  
   #Initial robot position
 
-coordinate_x0_m = 0 #Meters 
-coordinate_y0_m = 0 
+coordinate_x0_m = 26 #Meters 
+coordinate_y0_m = 2 
  
   #Robot paths
 
 step_right_m = 6     #Meters
-step_down_m  = 7
+step_down_m  = 4
 step_left_m  = 3
 step_up_m    = 2
 
