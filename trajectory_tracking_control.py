@@ -2,29 +2,38 @@
 
 
 
-#DATA
 
-step_right_m = 5
-step_down_m  = 4
+#DATA
+ 
+  #Initial robot position
+
+coordinate_x0_m = 0 #Meters 
+coordinate_y0_m = 0 
+ 
+  #Robot paths
+
+step_right_m = 6     #Meters
+step_down_m  = 7
 step_left_m  = 3
 step_up_m    = 2
 
-coordinate_x0_m = 12
-coordinate_y0_m = 8
 
 #LOGIC
 
-all_path_m = step_right_m + step_down_m + step_left_m + step_up_m  #Calculale how many steps the robot took
+all_path_m = step_right_m + step_down_m + step_left_m + step_up_m  #Calculale how many steps/meters the robot took
 
-coordinate_x4_m = ( coordinate_x0_m + step_right_m - step_left_m )
-coordinete_y4_m = ( coordinate_y0_m - step_down_m + step_up_m )
+  #New position calculate
 
-delta_right = abs( coordinate_x4_m - coordinate_x0_m )
-delta_down  = abs ( coordinate_y4_m - coordinate_y0_m )
+coordinate_x4_m = ( coordinate_x0_m + step_right_m - step_left_m ) #Meters
+coordinate_y4_m = ( coordinate_y0_m - step_down_m + step_up_m )
+
+  #Calculate displacement of cleaning robot 
+
+delta_right = abs( coordinate_x4_m - coordinate_x0_m )  #Meters
+delta_down = abs ( coordinate_y4_m - coordinate_y0_m )
 
 
 #VIEW
 
-print ( "1. All steps taken by the cleaning robot is: \n", all_path_m )
-print ( "2. New coordinates of cleaning robot is: " )
-print ( "3. The delta of cleaning robot is: "  )
+print ( "1. All steps taken by the cleaning robot is: ", all_path_m )
+print ( "2. The delta of cleaning robot is: right -  %d m; down - %d m"%( delta_right, delta_down ))
