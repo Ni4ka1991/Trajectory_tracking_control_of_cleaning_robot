@@ -1,11 +1,8 @@
 #!/usr/bin/env Python3
 
+#DATA
 
-
-
-#DATA 
- 
-  #Robot paths
+#Robot paths
 
 step_right_m = 5     #Meters
 step_down_m  = 4
